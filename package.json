@@ -1,0 +1,25 @@
+{
+  "name": "freekalmykia.org",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "generate-sitemap": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "next": "12.3.1",
+    "next-sitemap": "^3.1.29",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1",
+    "tailwindcss": "^3.2.0"
+  }
+}
