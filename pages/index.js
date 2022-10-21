@@ -22,12 +22,12 @@ export default function Home() {
           content="Free Kalmykia Foundation 501(c)(3) (Philadelpia, PA)"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.freekalmykia.org" />
+        <meta property="og:url" content="https://freekalmykia.org" />
         <meta
           property="og:image"
-          content="https://kalmuckroad.org/icon.svg"
+          content="https://freekalmykia.org/icon.png"
         />
-        <link rel="icon" type="image/png" href="./icon.svg" />
+        <link rel="icon" type="image/png" href="./icon.png" />
       </Head>
       <div className="flex h-1/5">
         <h1 className="text-4xl md:text-6xl font-extrabold text-kalmyk-blue font-nunito-sans text-center m-auto">Free Kalmykia Foundation</h1>
