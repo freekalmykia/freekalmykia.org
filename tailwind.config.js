@@ -9,9 +9,9 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'kalmyk-yellow': '#ffc72c',
-      'kalmyk-blue': '#009cdd',
-      'tibet-red': '#881d22',
+      'kalmyk-yellow': '#ffd700',
+      'kalmyk-blue': '#3399ff',
+      'kalmyk-red': '#d81e05',
       'tibet-red-light': '#a04a4e',
       'txt-on-kalmyk-blue': '#fff',
       'txt-dark': '#07142c',
