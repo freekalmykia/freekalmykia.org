@@ -33,7 +33,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-6xl font-extrabold text-kalmyk-blue font-nunito-sans text-center m-auto">Free Kalmykia Foundation</h1>
       </div>
       <div className="h-3/5">
-        <Image className="!relative" src="/icon.svg" fill style={{ objectFit: 'cover' }}/>
+        <Image className="!relative" src="/icon.svg" fill/>
       </div>
       <div className="flex h-1/5">
         <h2 className="text-xl md:text-3xl text-bold text-kalmyk-red font-nunito-sans m-auto">The website is coming soon</h2>
