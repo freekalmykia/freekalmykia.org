@@ -54,4 +54,4 @@ jobs:
             docker pull ghcr.io/freekalmykia/freekalmykia.org/freekalmykia:latest
             docker stop freekalmykia
             docker system prune -f
-            docker run --restart always --name freekalmykia -dit -p 5200:5200 ghcr.io/freekalmykia/freekalmykia.org/freekalmykia:latest
+            docker run --restart always --name freekalmykia -dit -p 5300:5300 ghcr.io/freekalmykia/freekalmykia.org/freekalmykia:latest
