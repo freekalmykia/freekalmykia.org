@@ -14,6 +14,7 @@ export default function Home() {
               alt={siteConfig.logoText}
               width={487}
               height={618}
+              loading='eager'
             />
           </div>
           <div class="mission mt-4 px-8">
