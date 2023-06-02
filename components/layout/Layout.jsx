@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import siteConfig from '../../config/site.config';
+import Script from 'next/script';
+import { getMetaTitle } from 'utils/meta';
 
 export default function Layout({
   metaTitle,
@@ -14,7 +16,7 @@ export default function Layout({
   return (
     <>
       <Head>
-        <title>{metaTitle}</title>
+        <title>{getMetaTitle(metaTitle)}</title>
 
         <meta charSet="utf-8" />
         <meta
@@ -26,12 +28,12 @@ export default function Layout({
         <meta name="author" content={metaAuthor} />
         <meta name="description" content={metaDescription} />
 
-        <meta property="og:title" content={metaTitle} />
+        <meta property="og:title" content={getMetaTitle(metaTitle)} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://freekalmykia.org" />
-        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:title" content={getMetaTitle(metaTitle)} />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content={metaDescription} />
@@ -43,6 +45,20 @@ export default function Layout({
         />
 
       </Head>
+
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-2J0SRY4K2B"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-2J0SRY4K2B');
+        `}
+      </Script>
 
       <Navbar />
 

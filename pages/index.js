@@ -4,7 +4,7 @@ import siteConfig from '../config/site.config';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout metaTitle="Home">
       <div className="flex justify-center items-center relative max-w-screen-xl py-12 mx-auto md:py-16 lg:py-20 lg:px-8">
         <div className="flex flex-col items-center mt-10">
           <div className="flex justify-center">
@@ -17,7 +17,7 @@ export default function Home() {
               loading='eager'
             />
           </div>
-          <div class="mission mt-4 px-8">
+          <div className="mission mt-4 px-8">
             <h2 className="text-xl font-semibold text-center mb-3">
               Our mission
             </h2>

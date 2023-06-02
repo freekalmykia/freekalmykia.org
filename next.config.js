@@ -6,9 +6,7 @@ const nextConfig = {
     version: "0.1.0"
   },
 	experimental: {
-		images: {
-			allowFutureImage: true
-		}
+		
 	},
   webpack: (config) => {
     config.module.rules
