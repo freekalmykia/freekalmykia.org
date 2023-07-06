@@ -6,15 +6,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    colors: {
-      'kalmyk-yellow': '#ffd700',
-      'kalmyk-blue': '#3399ff',
-      'kalmyk-red': '#d81e05',
-    },
     extend: {
       screens: {
         'xs': '475px',
         ...defaultTheme.screens
+      },
+      colors: {
+        'kalmyk-yellow': '#ffd700',
+        'kalmyk-blue': '#3399ff',
+        'kalmyk-red': '#d81e05',
+        ...defaultTheme.colors
       },
       fontFamily: {
         'nunito-sans': ['"Nunito Sans"'],
