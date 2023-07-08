@@ -66,7 +66,8 @@ export default function Donors({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://0.0.0.0:5401/donors/v1');
+  const hostname = process.env.NODE_ENV === 'development' ? 'localhost' : 'forms';
+  const res = await fetch(`http://${hostname}:5401/donors/v1`);
   const data = await res.json();
   return { props: { data } };
 }
