@@ -10,14 +10,14 @@ export default function Donors({ data }) {
       <div className="flex justify-content items-center max-w-screen-xl mx-auto px-8">
         <div className="w-full py-4">
           <div className="mb-6">
-            <Link href="/"><a className="text-blue-600 no-underline hover:underline">Return back to Home Page</a></Link>
+            <Link href="/"><a className="text-blue-600 no-underline hover:underline">Go back to Home Page</a></Link>
           </div>
           <div className="mb-4">
             <h1 className="text-3xl mb-4">Our donors</h1>
             <p className="text-sm mb-4">{`Last updated: ${lastUpdated}`}</p>
             <p className="text-xl mb-2">{ `Total: ${demographics.donors}` }</p>
-            <p className="text-base">{ `Donating monthly: ${demographics.monthly_donors}` }</p>
-            <p className="text-base">{ `Donating annually: ${demographics.annually_donors}` }</p>
+            <p className="text-base">{ `Giving monthly: ${demographics.monthly_donors}` }</p>
+            <p className="text-base">{ `Giving annually: ${demographics.annually_donors}` }</p>
           </div>
           <div className="mb-4">
             <h2 className="text-xl mb-2">Geography</h2>
@@ -49,13 +49,13 @@ export default function Donors({ data }) {
             </ul>
           </div>
           <div className="mb-4">
-            <h2 className="text-xl mb-2">Programs <span className="text-sm font-semibold">(monthly average)</span></h2>
+            <h2 className="text-xl mb-2">Programs receive <span className="text-sm font-semibold">(monthly average)</span></h2>
             <ul>
               <li className="text-base">
-                { `General purposes: $${programs.GP.amount} receiving` }
+                { `General purposes: $${programs.GP.amount}` }
               </li>
               <li className="text-bse">
-                { `Math class for children (NYC): $${programs.KIDS.amount} receiving` }
+                { `Math class for children (NYC): $${programs.KIDS.amount} ` }
               </li>
             </ul>
           </div>

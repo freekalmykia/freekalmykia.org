@@ -27,7 +27,7 @@ export default function DonationCompleted() {
             </h2>
           </div>
           <div>
-            <Link href="/"><a className="text-blue-600 no-underline hover:underline">Return back to Home Page</a></Link>
+            <Link href="/"><a className="text-blue-600 no-underline hover:underline">Go back to Home Page</a></Link>
           </div>
         </div>
       </div>
