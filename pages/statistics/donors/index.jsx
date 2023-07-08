@@ -66,7 +66,7 @@ export default function Donors({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://127.0.0.1:5401/donors/v1');
+  const res = await fetch('http://0.0.0.0:5401/donors/v1');
   const data = await res.json();
   return { props: { data } };
 }
