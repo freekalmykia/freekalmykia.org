@@ -53,5 +53,5 @@ jobs:
             docker login ghcr.io -u $GITHUB_USERNAME -p $GITHUB_TOKEN
             docker pull ghcr.io/freekalmykia/freekalmykia.org/freekalmykia:latest
             docker stop freekalmykia
-            docker system prune -f
+            docker system prune --filter="label!=fk-n" -f
             docker run --restart always --net freekalmykia-net --name freekalmykia -dit -p 5300:5300 ghcr.io/freekalmykia/freekalmykia.org/freekalmykia:latest
