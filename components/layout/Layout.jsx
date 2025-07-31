@@ -5,6 +5,7 @@ import siteConfig from '../../config/site.config';
 import Script from 'next/script';
 import { getMetaTitle } from 'utils/meta';
 import CookieConsent from 'react-cookie-consent';
+import Link from 'next/link';
 
 export default function Layout({
   metaTitle,
@@ -79,7 +80,7 @@ export default function Layout({
           }}
         >
           This website uses cookies to improve your experience. By continuing, you agree to our use of cookies. Read our{" "}
-          <a href="/privacy" className="underline">Privacy Policy</a>.
+          <Link href="/privacy"><a className="underline">Privacy Policy</a></Link>.
         </CookieConsent>
       </div>
     </>
