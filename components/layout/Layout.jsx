@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import Navbar from './Navbar';
+import Header from './Header';
 import Footer from './Footer';
 import siteConfig from '../../config/site.config';
 import Script from 'next/script';
 import { getMetaTitle } from 'utils/meta';
+import CookieConsent from 'react-cookie-consent';
 
 export default function Layout({
   metaTitle,
@@ -43,7 +44,6 @@ export default function Layout({
           href={siteConfig.favicon}
           type="image/x-icon"
         />
-
       </Head>
 
       <Script
@@ -60,11 +60,28 @@ export default function Layout({
         `}
       </Script>
 
-      <Navbar />
+      <div className="min-h-screen flex flex-col max-w-screen-xl mx-auto lg:px-8">
+        <Header />
 
-      {children}
+        <main className="flex flex-1 justify-center">
+          {children}
+        </main>
 
-      <Footer />
+        <Footer />
+        <CookieConsent
+          location="bottom"
+          buttonText="Accept"
+          cookieName="fkf_cookie_consent"
+          style={{ background: "#1f2937", color: "#fff" }} // Tailwind: bg-gray-800
+          buttonStyle={{
+            color: "#1f2937", background: "#fff", fontSize: "0.875rem",
+            borderRadius: "0.25rem", padding: "0.5rem 1rem"
+          }}
+        >
+          This website uses cookies to improve your experience. By continuing, you agree to our use of cookies. Read our{" "}
+          <a href="/privacy" className="underline">Privacy Policy</a>.
+        </CookieConsent>
+      </div>
     </>
   );
 }

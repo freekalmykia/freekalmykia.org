@@ -20,7 +20,8 @@ module.exports = {
       fontFamily: {
         'nunito-sans': ['"Nunito Sans"'],
         'castoro-titling': ["Castoro Titling"],
-        'staatliches': ["Staatliches"]
+        'staatliches': ["Staatliches"],
+        'libre': ['"Libre Baskerville"']
       }
     },
   },
