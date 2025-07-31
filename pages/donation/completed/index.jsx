@@ -1,6 +1,4 @@
-import Image from 'next/future/image';
 import Layout from "components/layout/Layout";
-import siteConfig from 'config/site.config';
 import Link from 'next/link';
 
 export default function DonationCompleted() {
