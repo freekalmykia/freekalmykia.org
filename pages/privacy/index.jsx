@@ -4,7 +4,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="max-w-4xl mx-auto py-8">
       <Link href="/">
-        <span className="p-4 hover:bg-blue-100 hover:cursor-pointer rounded-sm">
+        <span className="p-4 hover:bg-gray-200 hover:cursor-pointer rounded-sm">
           <a className="hover:underline text-lg">Back to Home</a>
         </span>
       </Link>

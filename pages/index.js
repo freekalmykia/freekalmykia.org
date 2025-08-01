@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <Layout metaTitle="Home">
         <div className="flex flex-col items-center">
-          <div className="mission mt-4 px-8">
-            <h2 className="text-xl font-semibold text-center mb-3">
+          <div className="mt-4 px-8">
+            <h2 className="text-3xl font-semibold mb-10">
               Our mission
             </h2>
             <p className="mb-4 lg:text-lg">

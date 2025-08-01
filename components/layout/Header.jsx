@@ -33,12 +33,12 @@ export default function Header() {
         <h1 className="hidden sm:block text-4xl font-semibold tracking-tight uppercase font-libre">Free Kalmykia Foundation</h1>
         <nav className="flex flex-wrap items-center gap-6 text-sm font-medium">
           <Link href="/">
-            <div className={classNames("px-3 py-1 hover:bg-blue-100 hover:cursor-pointer rounded-sm", { 'bg-blue-100': pathname === '/' })}>
+            <div className={classNames("px-3 py-1 hover:bg-gray-200 hover:cursor-pointer rounded-sm", { 'bg-gray-200': pathname === '/' })}>
               <a className="hover:underline text-lg">Home</a>
             </div>
           </Link>
           <Link href="/reports">
-            <div className={classNames("px-3 py-1 hover:bg-blue-100 hover:cursor-pointer rounded-sm", { 'bg-blue-100': pathname === '/reports' })}>
+            <div className={classNames("px-3 py-1 hover:bg-gray-200 hover:cursor-pointer rounded-sm", { 'bg-gray-200': pathname === '/reports' })}>
               <a className="hover:underline text-lg">Reports</a>
             </div>
           </Link>
