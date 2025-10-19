@@ -5,7 +5,7 @@ export default function Footer() {
     <p>501(c)(3) EIN: 92-1351359</p>
     <p>
       <Link href="mailto:board@freekalmykia.org">
-        <a className="text-blue-600 no-underline hover:underline">
+        <a className="text-[#17365d] no-underline hover:underline">
           board@freekalmykia.org
         </a>
       </Link>

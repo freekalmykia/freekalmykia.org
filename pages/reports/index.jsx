@@ -22,14 +22,14 @@ export default function Reports() {
             </div>
             {report.annual_report &&
               <div className="flex items-center justify-between border px-8 py-4 mb-6 shadow-sm hover:shadow-md transition">
-                <div className="text-lg sm:text-xl font-medium">
+                <div className="text-lg sm:text-xl font-medium mr-4">
                   {report.annual_report.name}
                 </div>
                 <a
                   href={report.annual_report.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline text-sm sm:text-base"
+                  className="text-[#17365d] hover:underline text-sm sm:text-base"
                 >
                   View
                 </a>
@@ -48,7 +48,7 @@ export default function Reports() {
                       href={q.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline text-sm sm:text-base"
+                      className="text-[#17365d] hover:underline text-sm sm:text-base"
                     >
                       View
                     </a>
