@@ -41,7 +41,7 @@ export default function Reports() {
                 .sort((a, b) => new Date(b.date) - new Date(a.date))
                 .map((q) => (
                   <div key={q.name} className="flex items-center justify-between border px-8 py-4 mb-6 shadow-sm hover:shadow-md transition">
-                    <div className="text-lg sm:text-xl font-medium">
+                    <div className="text-lg sm:text-xl font-medium mr-4">
                       {q.name}
                     </div>
                     <a
