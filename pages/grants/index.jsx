@@ -73,7 +73,7 @@ export default function Grants() {
             </h3>
             <ul className="list-disc ml-8 lg:text-lg">
               <li>
-                Applicants must provide their tribe and clan name.
+                Applicants must provide their ethnic group and house within the Oirat-Kalmyk people.
               </li>
               <li>
                 Test results must be made publicly viewable on GEDMatch or FamilyTreeDNA.
