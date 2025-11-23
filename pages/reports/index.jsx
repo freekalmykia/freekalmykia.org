@@ -18,7 +18,7 @@ export default function Reports() {
         {reports.sort((a, b) => b.year - a.year).map((report) => (
           <div key={report.year}>
             <div className="">
-              <h2 className="text-3xl font-semibold mb-10">{`${report.year} Reports`}</h2>  
+              <h2 className="text-3xl font-bold mb-10">{`${report.year} Reports`}</h2>  
             </div>
             {report.annual_report &&
               <div className="flex items-center justify-between border px-8 py-4 mb-6 shadow-sm hover:shadow-md transition">

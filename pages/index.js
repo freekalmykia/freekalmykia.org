@@ -5,7 +5,7 @@ export default function Home() {
     <Layout metaTitle="Home">
         <div className="flex flex-col items-center">
           <div className="mt-4 px-8">
-            <h2 className="text-3xl font-semibold mb-10">
+            <h2 className="text-3xl font-bold mb-10">
               Our Mission
             </h2>
             <p className="mb-4 lg:text-lg">
