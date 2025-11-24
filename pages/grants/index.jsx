@@ -1,9 +1,9 @@
 import Layout from 'components/layout/Layout';
 import Link from 'next/link';
 
-export default function Grants() {
+export default function Grants({ layoutProps }) {
   return (
-    <Layout metaTitle="Grants">
+    <Layout {...layoutProps}>
         <div className="flex flex-col items-center">
           <div className="mt-4 px-8">
             <h2 className="text-3xl font-bold mb-10">
@@ -115,6 +115,11 @@ export default function Grants() {
 
 export async function getStaticProps() {
   return {
-    props: {}
+    props: {
+      layoutProps: {
+        metaTitle: "Grants",
+        metaDescription: "Grants and reimbursement programs supporting Oirat-Kalmyk language, culture, historical scholarship, and research initiatives."
+      }
+    }
   }
 }
