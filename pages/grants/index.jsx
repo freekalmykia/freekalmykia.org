@@ -56,17 +56,20 @@ export default function Grants({ layoutProps }) {
             </p>
             <ul className="list-disc ml-8 lg:text-lg">
               <li>
-                23andMe — Ancestry or Ancestry + Health tests: $50 reimbursement
+                23andMe — Ancestry or Ancestry + Health tests: up to $50 reimbursement
+              </li>
+              <li>
+                FamilyTreeDNA — Family Ancestry test: up to $50 reimbursement
               </li>
               <li>
                 FamilyTreeDNA Big Y-700 test only: $250 reimbursement
               </li>
             </ul>
             <p className="lg:text-lg">
-              (Lower-level FamilyTreeDNA tests, such as Y-37 or Y-111, are not eligible.)
+              (Lower-level FamilyTreeDNA Y DNA tests, such as Y-37 or Y-111, are not eligible.)
             </p>
             <p className="lg:text-lg">
-              (Eligible haplogroups: C3, O, N3, R2a-M124)
+              (Eligible haplogroups for Big Y-700 test: C3, O, N3, R2a-M124)
             </p>
             <h3 className="text-xl font-semibold mb-4 mt-6">
               Requirements
