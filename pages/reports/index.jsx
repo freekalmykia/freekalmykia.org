@@ -1,19 +1,9 @@
 import { useEffect, useState } from 'react';
 import Layout from 'components/layout/Layout';
 
-export default function Reports() {
-  const [reports, setReports] = useState([]);
-
-  useEffect(() => {
-    fetch('https://s3fkf-public.s3.us-east-2.amazonaws.com/financial_reports/reports.json')
-      .then((res) => res.json())
-      .then((data) => setReports(data))
-      .catch((error) => console.log('Failed to load reports: ', error))
-  }, [])
-
-
+export default function Reports({ layoutProps, reports }) {
   return (
-    <Layout metaTitle="Reports">
+    <Layout {...layoutProps}>
       <div className="w-full mt-4 mx-8">
         {reports.sort((a, b) => b.year - a.year).map((report) => (
           <div key={report.year}>
@@ -67,7 +57,21 @@ export default function Reports() {
 }
 
 export async function getStaticProps() {
+  let reports = [];
+  try {
+    const response = await fetch('https://s3fkf-public.s3.us-east-2.amazonaws.com/financial_reports/reports.json');
+    reports = await response.json();
+  } catch (error) {
+    console.log('Failed to load reports: ', error);
+  }
+  
   return {
-    props: {}
+    props: {
+      layoutProps: {
+        metaTitle: "Reports",
+        metaDescription: "Quarterly reports outlining the Free Kalmykia Foundation's finances, grants, and investment activity in support of Oirat-Kalmyk language, culture, and research."
+      },
+      reports
+    }
   }
 }
