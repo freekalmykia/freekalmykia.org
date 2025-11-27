@@ -1,5 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://freekalmykia.org',
-  generateRobotsTxt: true
+  generateRobotsTxt: true,
+  generateIndexSitemap: false
 }

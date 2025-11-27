@@ -65,11 +65,11 @@ export default function Grants({ layoutProps }) {
                 FamilyTreeDNA Big Y-700 test only: $250 reimbursement
               </li>
             </ul>
-            <p className="lg:text-lg">
-              (Lower-level FamilyTreeDNA Y DNA tests, such as Y-37 or Y-111, are not eligible.)
+            <p className="lg:text-lg mt-4">
+              Lower-level FamilyTreeDNA Y-DNA tests, such as Y-37 or Y-111, are not eligible.
             </p>
             <p className="lg:text-lg">
-              (Eligible haplogroups for Big Y-700 test: C3, O, N3, R2a-M124)
+              Eligible haplogroups for Big Y-700 test: C3, O, N3, R2a-M124
             </p>
             <h3 className="text-xl font-semibold mb-4 mt-6">
               Requirements
