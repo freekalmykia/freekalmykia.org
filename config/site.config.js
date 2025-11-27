@@ -1,10 +1,10 @@
 export default {
   "metaData": {
     "title" : "Free Kalmykia Foundation",
-    "description" : "Nonprofit organization of Oirat-Kalmyk community",
+    "description" : "Nonprofit foundation dedicated to supporting the Oirat-Kalmyk language, culture, and historical scholarship",
     "author" : "Free Kalmykia Foundation, Inc.",
     "keyword" : "oirats, oirads, kalmyks, Kalmykia, captive nations",
-    "ogImage" : "https://freekalmykia.org/images/ogimage.jpg"
+    "ogImage" : "https://freekalmykia.org/images/fkf_og_image.png"
   },
   "baseURL" : "https://freekalmykia.org/",
   "logoFull" : "/images/fkf_logo_full.png",

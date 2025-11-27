@@ -9,7 +9,7 @@ export default function Home({ layoutProps }) {
               Our Mission
             </h2>
             <p className="mb-4 lg:text-lg">
-              The Free Kalmykia Foundation is a U.S.-based 501(c)(3) nonprofit foundation and investment fund that supports the preservation and promotion of the Oirat-Kalmyk language, culture, and historical scholarship.
+              The Free Kalmykia Foundation is a U.S.-based 501(c)(3) nonprofit foundation dedicated to supporting the Oirat-Kalmyk language, culture, and historical scholarship. Its charitable activities are funded through individual donations and the prudent investment of the Foundation’s own assets.
             </p>
             <p className="mb-4 lg:text-lg">
               We also fund independent research and analysis related to issues affecting Kalmyks today and in the future. Our mission is to foster cultural continuity, education, and informed dialogue within the Kalmyk diaspora and beyond.
@@ -28,7 +28,7 @@ export async function getStaticProps() {
     props: {
       layoutProps: {
         metaTitle: "Home",
-        metaDescription: "Nonprofit foundation and investment fund supporting the preservation and promotion of the Oirat-Kalmyk language, culture, and historical scholarship."
+        metaDescription: "Supporting Oirat-Kalmyk language, culture, history, and independent research through grants and prudent management of Foundation assets."
       }
     }
   }
