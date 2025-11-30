@@ -13,10 +13,10 @@ export default function Grants({ layoutProps }) {
               Our First Grant
             </h3>
             <p className="mb-4 lg:text-lg">
-              In 2026, the Free Kalmykia Foundation plans to award its first $500 pilot grant to support a project related to Oirat-Kalmyk language, culture, or research.
+              In 2026, the Free Kalmykia Foundation will provide a $500 grant to support a project related to Oirat-Kalmyk language, culture, history, or independent research on contemporary Kalmyk issues.
             </p>
             <p className="mb-4 lg:text-lg">
-              Although small, this first grant begins our effort to build a lasting fund to support Oirat-Kalmyk initiatives over time.
+              Although modest, this first grant marks the beginning of our effort to build a lasting fund that can grow support for Oirat-Kalmyk initiatives over time.
             </p>
             <h3 className="text-xl font-semibold mb-4 mt-6">
               Eligibility
@@ -26,20 +26,43 @@ export default function Grants({ layoutProps }) {
             </p>
             <ul className="list-disc ml-8 lg:text-lg">
               <li>
-                Cultural and educational programs
+                Language-related programs or teaching
               </li>
               <li>
-                Language preservation and teaching
+                Cultural or educational activities
               </li>
               <li>
-                Academic or community research related to Oirat-Kalmyk history or contemporary issues
+                Historical scholarship
+              </li>
+              <li>
+                Independent research on contemporary Oirat-Kalmyk issues
               </li>
             </ul>
             <h3 className="text-xl font-semibold mb-4 mt-6">
               Application process
             </h3>
             <p className="lg:text-lg">
-              Grant application details will be published here once the program is finalized.
+              Full application details will be published here once the grant program is finalized.
+            </p>
+            <p className="lg:text-lg mb-4">
+              Applicants will be asked to submit:
+            </p>
+            <ul className="list-disc ml-8 lg:text-lg mb-4">
+              <li>
+                A brief project description
+              </li>
+              <li>
+                The project’s goals and expected outcomes
+              </li>
+              <li>
+                A simple budget outline
+              </li>
+              <li>
+                Applicant contact information
+              </li>
+            </ul>
+            <p className="lg:text-lg">
+              Applications will be accepted through a dedicated form once released.
             </p>
             <p className="mt-6 border-b-2"></p>
             <h3 className="text-2xl font-semibold mb-4 mt-8">
