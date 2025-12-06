@@ -42,27 +42,26 @@ export default function Grants({ layoutProps }) {
               Application process
             </h3>
             <p className="lg:text-lg">
-              Full application details will be published here once the grant program is finalized.
+              Applicants may submit a grant request using the form below:
             </p>
-            <p className="lg:text-lg mb-4">
-              Applicants will be asked to submit:
+            <p className="lg:text-lg my-4">
+              <Link href="https://s3fkf-public.s3.us-east-2.amazonaws.com/docs/FKF_Grant_Application.docx">
+                <a
+                  className="text-[#17365d] no-underline hover:underline"
+                >
+                  Download the Grant Application Form (MS DOCX)
+                </a>
+              </Link>
             </p>
-            <ul className="list-disc ml-8 lg:text-lg mb-4">
-              <li>
-                A brief project description
-              </li>
-              <li>
-                The project’s goals and expected outcomes
-              </li>
-              <li>
-                A simple budget outline
-              </li>
-              <li>
-                Applicant contact information
-              </li>
-            </ul>
             <p className="lg:text-lg">
-              Applications will be accepted through a dedicated form once released.
+              Completed applications should be sent to <Link href="mailto:board@freekalmykia.org">
+                <a className="text-[#17365d] no-underline hover:underline">
+                  board@freekalmykia.org
+                </a>
+              </Link>
+            </p>
+            <p className="lg:text-lg mt-4">
+              Applications are reviewed as they are received.
             </p>
             <p className="mt-6 border-b-2"></p>
             <h3 className="text-2xl font-semibold mb-4 mt-8">
