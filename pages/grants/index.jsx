@@ -1,146 +1,29 @@
 import Layout from 'components/layout/Layout';
 import Link from 'next/link';
+import { getAllGrants } from 'utils/grants';
+import GrantCard from 'components/GrantCard';
 
-export default function Grants({ layoutProps }) {
+
+export default function Grants({ grants, layoutProps }) {
   return (
     <Layout {...layoutProps}>
-        <div className="flex flex-col items-center">
-          <div className="mt-4 px-8">
-            <h2 className="text-3xl font-bold mb-10">
-              Grants
-            </h2>
-            <h3 className="text-2xl font-semibold mb-4">
-              Our First Grant
-            </h3>
-            <p className="mb-4 lg:text-lg">
-              In 2026, the Free Kalmykia Foundation will provide a $500 grant to support a project related to Oirat-Kalmyk language, culture, history, or independent research on contemporary Kalmyk issues.
-            </p>
-            <p className="mb-4 lg:text-lg">
-              Although modest, this first grant marks the beginning of our effort to build a lasting fund that can grow support for Oirat-Kalmyk initiatives over time.
-            </p>
-            <h3 className="text-xl font-semibold mb-4 mt-6">
-              Eligibility
-            </h3>
-            <p className="mb-4 lg:text-lg">
-              Projects and initiatives aligned with the Foundation’s mission are eligible, including:
-            </p>
-            <ul className="list-disc ml-8 lg:text-lg">
-              <li>
-                Language-related programs or teaching
-              </li>
-              <li>
-                Cultural or educational activities
-              </li>
-              <li>
-                Historical scholarship
-              </li>
-              <li>
-                Independent research on contemporary Oirat-Kalmyk issues
-              </li>
-            </ul>
-            <h3 className="text-xl font-semibold mb-4 mt-6">
-              Application process
-            </h3>
-            <p className="lg:text-lg">
-              Applicants may submit a grant request using the form below:
-            </p>
-            <p className="lg:text-lg my-4">
-              <Link href="https://s3fkf-public.s3.us-east-2.amazonaws.com/docs/FKF_Grant_Application.docx">
-                <a
-                  className="text-[#17365d] no-underline hover:underline"
-                >
-                  Download the Grant Application Form (MS DOCX)
-                </a>
-              </Link>
-            </p>
-            <p className="lg:text-lg">
-              Completed applications should be sent to <Link href="mailto:board@freekalmykia.org">
-                <a className="text-[#17365d] no-underline hover:underline">
-                  board@freekalmykia.org
-                </a>
-              </Link>
-            </p>
-            <p className="lg:text-lg mt-4">
-              Applications are reviewed as they are received.
-            </p>
-            <p className="mt-6 border-b-2"></p>
-            <h3 className="text-2xl font-semibold mb-4 mt-8">
-              DNA Test Reimbursement Program
-            </h3>
-            <p className="mb-4 lg:text-lg">
-              The Free Kalmykia Foundation offers partial reimbursements for DNA tests that support genealogical, historical, and cultural research related to Oirats and Kalmyks. This program is intended to make lineage testing more accessible while inviting participants to make their results publicly viewable to support independent research.
-            </p>
-            <h3 className="text-xl font-semibold mb-4 mt-6">
-              Eligible Tests & Reimbursement Amounts
-            </h3>
-            <p className="mb-4 lg:text-lg">
-              Only tests from 23andMe or FamilyTreeDNA qualify:
-            </p>
-            <ul className="list-disc ml-8 lg:text-lg">
-              <li>
-                23andMe — Ancestry or Ancestry + Health tests: up to $50 reimbursement
-              </li>
-              <li>
-                FamilyTreeDNA — Family Ancestry test: up to $50 reimbursement
-              </li>
-              <li>
-                FamilyTreeDNA Big Y-700 test only: $250 reimbursement
-              </li>
-            </ul>
-            <p className="lg:text-lg mt-4">
-              Lower-level FamilyTreeDNA Y-DNA tests, such as Y-37 or Y-111, are not eligible.
-            </p>
-            <p className="lg:text-lg">
-              Eligible haplogroups for Big Y-700 test: C3, O, N3, R2a-M124
-            </p>
-            <h3 className="text-xl font-semibold mb-4 mt-6">
-              Requirements
-            </h3>
-            <ul className="list-disc ml-8 lg:text-lg">
-              <li>
-                Applicants must provide their ethnic group and house within the Oirat-Kalmyk people.
-              </li>
-              <li>
-                Test results must be made publicly viewable on GEDMatch or FamilyTreeDNA.
-              </li>
-              <li>
-                Applications must include proof of purchase and proof of public access.
-              </li>
-              <li>
-                Send applications to: <Link href="mailto:board@freekalmykia.org">
-                  <a className="text-[#17365d] no-underline hover:underline">
-                    board@freekalmykia.org
-                  </a>
-                </Link>
-              </li>
-            </ul>
-            <h3 className="text-xl font-semibold mb-4 mt-6">
-              Funding Limit
-            </h3>
-            <p className="lg:text-lg">
-              Funds for this program are limited. Applications will be processed in the order received and reimbursed only while funds are available. New funds will be allocated each year, allowing the program to continue on an annual basis.
-            </p>
-            <h3 className="text-xl font-semibold mb-4 mt-6">
-              Purpose
-            </h3>
-            <p className="lg:text-lg">
-              This program supports the long-term effort to improve the availability of open-source Oirat-Kalmyk lineage data for historical and anthropological research. It also reflects the Foundation’s broader mission to preserve and advance knowledge of Oirat-Kalmyk origins, language, and culture.
-            </p>
-            <h3 className="text-xl font-semibold mb-4 mt-6">
-              Privacy and Data Use
-            </h3>
-            <p className="lg:text-lg">
-              The Foundation does not collect, store, or analyze any genetic data from participants. The Foundation’s role is limited to reviewing eligibility and processing reimbursements.
-            </p>
-          </div>
+        <div className="w-full mt-4 mx-8">
+          <h2 className="text-3xl font-bold mb-10">
+            Grants
+          </h2>
+          {grants.map((grant) => (
+            <GrantCard key={grant.slug} grant={grant} />
+          ))}
         </div>
     </Layout>
   )
 }
 
 export async function getStaticProps() {
+  const grants = getAllGrants();
   return {
     props: {
+      grants,
       layoutProps: {
         metaTitle: "Grants",
         metaDescription: "Grants and reimbursement programs supporting Oirat-Kalmyk language, culture, historical scholarship, and research initiatives."

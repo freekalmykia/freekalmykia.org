@@ -7,7 +7,6 @@ import classNames from 'classnames';
 export default function Header() {
   const router = useRouter();
   const pathname = router.pathname;
-  console.log('pathname: ', pathname);
 
   return <header className="py-8">
     <div className="flex flex-col sm:flex-row items-center justify-between sm:justify-start px-8">
@@ -43,7 +42,7 @@ export default function Header() {
             </div>
           </Link>
           <Link href="/grants">
-            <div className={classNames("px-3 py-1 hover:bg-gray-200 hover:cursor-pointer rounded-sm", { 'bg-gray-200': pathname === '/grants' })}>
+            <div className={classNames("px-3 py-1 hover:bg-gray-200 hover:cursor-pointer rounded-sm", { 'bg-gray-200': pathname.includes('/grants') })}>
               <a className="hover:underline text-lg">Grants</a>
             </div>
           </Link>
