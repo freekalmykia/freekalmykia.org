@@ -10,3 +10,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+.grant p {
+  @apply lg:text-lg text-base;
+}
+
+.grant li {
+  @apply lg:text-lg text-base;
+}
+
+.grant a {
+  @apply text-[#17365d] hover:underline no-underline text-sm sm:text-base
+}
