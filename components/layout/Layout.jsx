@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import siteConfig from '../../config/site.config';
 import Script from 'next/script';
-import { getMetaTitle } from 'utils/meta';
+import { getMetaTitle } from 'lib/meta';
 import CookieConsent from 'react-cookie-consent';
 import Link from 'next/link';
 
@@ -64,7 +64,7 @@ export default function Layout({
       <div className="min-h-screen flex flex-col max-w-screen-xl mx-auto lg:px-8">
         <Header />
 
-        <main className="flex flex-1 justify-center">
+        <main className="flex flex-1 justify-center mb-16">
           {children}
         </main>
 

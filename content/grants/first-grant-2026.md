@@ -24,8 +24,12 @@ Projects and initiatives aligned with the Foundation’s mission are eligible, i
 
 Applicants may submit a grant request using the form below:
 
-[Grant Application Form (MS DOCX)](https://s3fkf-public.s3.us-east-2.amazonaws.com/docs/FKF_Grant_Application.docx)
+- FKF_Grant_Application.doc - [Download](https://s3fkf-public.s3.us-east-2.amazonaws.com/docs/FKF_Grant_Application.doc)
+
+- FKF_Grant_Application.txt - [Download](https://s3fkf-public.s3.us-east-2.amazonaws.com/docs/FKF_Grant_Application.txt)
 
 Completed applications should be sent to <board@freekalmykia.org>
+
+You may also apply through the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdBhbmXZK9DOlGhJysj4bsSksjjMMSl-YWXdyRYiG_Y3cKK0Q/viewform?usp=header), or simply send your responses in the body of an email to <board@freekalmykia.org>
 
 Applications are reviewed as they are received.

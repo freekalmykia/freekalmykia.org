@@ -1,6 +1,6 @@
 import Layout from 'components/layout/Layout';
 import Link from 'next/link';
-import { getAllGrants } from 'utils/grants';
+import { getAllGrants } from 'lib/grants';
 import GrantCard from 'components/GrantCard';
 
 
