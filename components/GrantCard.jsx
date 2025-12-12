@@ -1,16 +1,10 @@
 import Link from "next/link";
+import { getGrantBgColorByStatus } from "utils/grants";
 
 export default function GrantCard({ grant }) {
   const { title, description, slug, status } = grant;
 
-  const statusColor =
-    status === "open"
-      ? "bg-green-300"
-      : status === "funded"
-      ? "bg-blue-300"
-      : status === "closed"
-      ? "bg-gray-200"
-      : "bg-gray-200";
+  const statusColor = getGrantBgColorByStatus(status);
 
   return (
     <div className="border px-8 py-4 mb-6 shadow-sm hover:shadow-md transition">
@@ -27,7 +21,7 @@ export default function GrantCard({ grant }) {
       <p className="lg:text-lg my-4">{description}</p>
 
       <Link href={`/grants/${slug}`}>
-        <a className="text-[#17365d] hover:underline text-sm sm:text-base mt-4">
+        <a className="inline-block px-3 py-1.5 border border-[#17365d] text-[#17365d] rounded hover:bg-[#17365d] hover:text-white transition text-sm sm:text-base">
           View details
         </a>
       </Link>

@@ -1,8 +1,10 @@
 import Layout from "components/layout/Layout";
 import Link from "next/link";
-import { getAllGrants, getGrantBySlug } from "utils/grants";
+import { getAllGrants, getGrantBySlug } from "lib/grants";
 import { marked } from "marked";
 import siteConfig from "config/site.config";
+import classNames from "classnames";
+import { getGrantBgColorByStatus } from "utils/grants";
 
 export async function getStaticPaths() {
   const grants = getAllGrants();
@@ -33,6 +35,9 @@ export async function getStaticProps({ params }) {
 }
 
 export default function GrantPage({ grant, layoutProps }) {
+
+  const isFunded = grant.status === 'funded';
+
   return (
     <Layout {...layoutProps}>
       <div className="w-full mt-4 mx-8">
@@ -43,18 +48,37 @@ export default function GrantPage({ grant, layoutProps }) {
             </svg> Back to grants
           </a>
         </Link>
-        <article className="grant">
-          <h1 className="text-3xl font-bold mb-4">{grant.title}</h1>
+        <div className={`grid gap-8 ${isFunded ? "md:grid-cols-2" : ""}`}>
+          <article className="grant">
+            <h1 className="text-3xl font-bold mb-4">{grant.title}</h1>
+            <p>
+              <strong>Status:</strong>
+              <span className={classNames('inline-block px-2 py-1 text-sm font-semibold ml-3 uppercase', getGrantBgColorByStatus(grant.status))}>{grant.status}</span>
+            </p>
+            <div
+              className="prose mt-6"
+              dangerouslySetInnerHTML={{ __html: grant.html }}
+            />
+          </article>
+          {isFunded && (
+            <aside className="border rounded-md p-6 bg-gray-50 h-fit">
+              <h3 className="text-xl font-bold mb-4">Funded Project</h3>
 
-          {/* Status, deadline, etc. */}
-          <p><strong>Status:</strong> {grant.status}</p>
+              {/* You can add whatever fields you want here */}
+              {grant.funded_amount && (
+                <p className="mb-2">
+                  <strong>Amount funded:</strong> ${grant.funded_amount}
+                </p>
+              )}
 
-          {/* Markdown content */}
-          <div
-            className="prose mt-6"
-            dangerouslySetInnerHTML={{ __html: grant.html }}
-          />
-        </article>
+              {grant.project_summary && (
+                <p className="mt-4 text-gray-700 whitespace-pre-line">
+                  <strong>Project summary:</strong> {grant.project_summary}
+                </p>
+              )}
+            </aside>
+          )}
+        </div>
       </div>
     </Layout>
   );

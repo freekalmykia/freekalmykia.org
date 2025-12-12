@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Layout from 'components/layout/Layout';
 
 export default function Reports({ layoutProps, reports }) {
@@ -38,9 +37,9 @@ export default function Reports({ layoutProps, reports }) {
                       href={q.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#17365d] hover:underline text-sm sm:text-base"
+                      className="inline-block px-3 py-1.5 border border-[#17365d] text-[#17365d] rounded hover:bg-[#17365d] hover:text-white transition text-sm sm:text-base"
                     >
-                      View
+                      PDF
                     </a>
                   </div>
                 ))
