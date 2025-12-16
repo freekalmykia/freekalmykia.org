@@ -2,7 +2,7 @@
 title: "Our First Grant"
 slug: "first-grant-2026"
 description: "A small grant to assist your project related to Oirat-Kalmyk language, culture, history, or independent research on contemporary Kalmyk issues."
-ogImage: "https://freekalmykia.org/images/grants/2026_morn_jil_grant.png"
+ogImage: "https://freekalmykia.org/images/grants/2026_first_grant.png"
 status: "funded"
 date: "11/30/2025"
 funded_amount: 500
