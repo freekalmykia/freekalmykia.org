@@ -1,4 +1,5 @@
 import Layout from 'components/layout/Layout';
+import { trackEvent } from 'lib/ga';
 
 export default function Reports({ layoutProps, reports }) {
   return (
@@ -19,8 +20,11 @@ export default function Reports({ layoutProps, reports }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#17365d] hover:underline text-sm sm:text-base"
+                  onClick={() => trackEvent('report_click', {
+                    report: report.annual_report.name
+                  })}
                 >
-                  View
+                  PDF
                 </a>
               </div>
             }
@@ -38,6 +42,9 @@ export default function Reports({ layoutProps, reports }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-3 py-1.5 border border-[#17365d] text-[#17365d] rounded hover:bg-[#17365d] hover:text-white transition text-sm sm:text-base"
+                      onClick={() => trackEvent('report_click', {
+                        report: q.name
+                      })}
                     >
                       PDF
                     </a>
