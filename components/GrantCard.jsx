@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getGrantBgColorByStatus } from "utils/grants";
+import { trackEvent } from 'lib/ga';
 
 export default function GrantCard({ grant }) {
   const { title, description, slug, status } = grant;
@@ -21,7 +22,12 @@ export default function GrantCard({ grant }) {
       <p className="lg:text-lg my-4">{description}</p>
 
       <Link href={`/grants/${slug}`}>
-        <a className="inline-block px-3 py-1.5 border border-[#17365d] text-[#17365d] rounded hover:bg-[#17365d] hover:text-white transition text-sm sm:text-base">
+        <a
+          className="inline-block px-3 py-1.5 border border-[#17365d] text-[#17365d] rounded hover:bg-[#17365d] hover:text-white transition text-sm sm:text-base"
+          onClick={() => trackEvent('grant_click', {
+            grant: grant.title
+          })}
+        >
           View details
         </a>
       </Link>
