@@ -19,7 +19,7 @@ export default function Reports({ layoutProps, reports }) {
                   href={report.annual_report.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#17365d] hover:underline text-sm sm:text-base"
+                  className="inline-block px-3 py-1.5 border border-[#17365d] text-[#17365d] rounded hover:bg-[#17365d] hover:text-white transition text-sm sm:text-base"
                   onClick={() => trackEvent('report_click', {
                     report: report.annual_report.name
                   })}
@@ -67,6 +67,7 @@ export async function getStaticProps() {
   try {
     const response = await fetch('https://s3fkf-public.s3.us-east-2.amazonaws.com/financial_reports/reports.json');
     reports = await response.json();
+    console.log(reports);
   } catch (error) {
     console.log('Failed to load reports: ', error);
   }
