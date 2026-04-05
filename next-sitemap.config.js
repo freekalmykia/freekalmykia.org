@@ -2,5 +2,6 @@
 module.exports = {
   siteUrl: 'https://freekalmykia.org',
   generateRobotsTxt: true,
-  generateIndexSitemap: false
+  generateIndexSitemap: false,
+  outDir: './out'
 }
