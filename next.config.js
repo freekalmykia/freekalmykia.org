@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   reactStrictMode: true,
   swcMinify: true,
   env: {
@@ -11,6 +12,9 @@ const nextConfig = {
 	i18n: {
     locales: ['en'],
     defaultLocale: 'en'
+  },
+  images: {
+    unoptimized: true
   }
 }
 
