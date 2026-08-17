@@ -2,7 +2,7 @@
 title: "DNA Test Reimbursement Program"
 slug: "dna-test-reimbursement-program"
 description: "Partial reimbursement for DNA tests to support Oirat–Kalmyk genealogical and historical research."
-status: "open"
+status: "closed"
 date: "11/23/2025"
 ---
 

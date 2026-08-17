@@ -32,6 +32,4 @@ Applicants may submit a grant request using the form below:
 
 Completed applications should be sent to <board@freekalmykia.org>
 
-You may also apply through the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdBhbmXZK9DOlGhJysj4bsSksjjMMSl-YWXdyRYiG_Y3cKK0Q/viewform?usp=header), or simply send your responses in the body of an email to <board@freekalmykia.org>
-
 Applications are reviewed as they are received.
